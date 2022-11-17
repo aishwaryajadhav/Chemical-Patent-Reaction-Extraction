@@ -1,0 +1,126 @@
+Chem Bert Chem+Pharma No finetuning, Training from 94 checkpoint for remaining model
+Using pretrained model:  recobo/chemical-bert-uncased-pharmaceutical-chemical-classifier
+Freeze Bert:  True
+Cuda =  True  with num_workers =  8  system version =  3.7.13 (default, Oct 18 2022, 18:57:03) 
+[GCC 11.2.0]
+128
+128
+128
+Train dataset len 23002
+Val dataset len 471
+Test dataset len 804
+Train Loader len 2876
+Val Loader len 59
+Test Loader Len len 101
+Total params:  130909458
+Trainable params:  20990994
+Non Trainable params:  109918464
+Epochs:  6
+Lamda:  0.001
+Learning Rate:  1e-05
+Epoch #1
+learning_rate: [9.3301270189222e-06]
+Training loss: 3.89, Time: 926.8043947219849
+{'eval_accuracy': 0.9146052517172419, 'eval_precision': 0.9121955666411059, 'eval_recall': 0.9146052517172419, 'eval_f-1': 0.9122375695294087}
+learning_rate: [9.3301270189222e-06]
+Validation loss: 4.47, Time: 15.393730878829956
+{'eval_accuracy': 0.8891985138004246, 'eval_precision': 0.8975798070253189, 'eval_recall': 0.8891985138004246, 'eval_f-1': 0.8920091047502694}
+Total original spans:  911
+Total predicted spans:  1017
+Total number of original spans correctly predicted acc to strict match:  623
+Percent of original spans correctly predicted acc to strict match:  68.38638858397366
+Total number of original spans correctly predicted acc to fuzzy match:  751
+Percent of original spans correctly predicted acc to fuzzy match:  82.43688254665203
+Count of fuzzy matched spans:  128
+Count of spans with misaligned begin and end: 50 (39.06%) 
+Count of spans with misaligned begin: 60 (46.88%) 
+Count of spans with misaligned end: 18 (14.06%) 
+Epoch #2
+learning_rate: [7.5000000000000315e-06]
+Training loss: 1.59, Time: 928.4430928230286
+{'eval_accuracy': 0.9667719111381619, 'eval_precision': 0.9665017736532518, 'eval_recall': 0.9667719111381619, 'eval_f-1': 0.9665829593419453}
+learning_rate: [7.5000000000000315e-06]
+Validation loss: 3.95, Time: 15.2759268283844
+{'eval_accuracy': 0.913083864118896, 'eval_precision': 0.9146296555592118, 'eval_recall': 0.913083864118896, 'eval_f-1': 0.9136581763312392}
+Total original spans:  911
+Total predicted spans:  931
+Total number of original spans correctly predicted acc to strict match:  637
+Percent of original spans correctly predicted acc to strict match:  69.92316136114161
+Total number of original spans correctly predicted acc to fuzzy match:  730
+Percent of original spans correctly predicted acc to fuzzy match:  80.13172338090011
+Count of fuzzy matched spans:  93
+Count of spans with misaligned begin and end: 41 (44.09%) 
+Count of spans with misaligned begin: 27 (29.03%) 
+Count of spans with misaligned end: 25 (26.88%) 
+Epoch #3
+learning_rate: [5.000000000000036e-06]
+Training loss: 1.02, Time: 927.9908154010773
+{'eval_accuracy': 0.9788632510216503, 'eval_precision': 0.9787462499357896, 'eval_recall': 0.9788632510216503, 'eval_f-1': 0.9787813033326254}
+learning_rate: [5.000000000000036e-06]
+Validation loss: 4.05, Time: 15.339241981506348
+{'eval_accuracy': 0.9209129511677282, 'eval_precision': 0.9221130004211989, 'eval_recall': 0.9209129511677282, 'eval_f-1': 0.920546533634258}
+Total original spans:  911
+Total predicted spans:  802
+Total number of original spans correctly predicted acc to strict match:  629
+Percent of original spans correctly predicted acc to strict match:  69.0450054884742
+Total number of original spans correctly predicted acc to fuzzy match:  705
+Percent of original spans correctly predicted acc to fuzzy match:  77.38748627881449
+Count of fuzzy matched spans:  76
+Count of spans with misaligned begin and end: 33 (43.42%) 
+Count of spans with misaligned begin: 24 (31.58%) 
+Count of spans with misaligned end: 19 (25.00%) 
+Epoch #4
+learning_rate: [2.5000000000000066e-06]
+Training loss: 0.71, Time: 925.5786590576172
+{'eval_accuracy': 0.9852458481871141, 'eval_precision': 0.9851949385238393, 'eval_recall': 0.9852458481871141, 'eval_f-1': 0.9852124775789508}
+learning_rate: [2.5000000000000066e-06]
+Validation loss: 4.08, Time: 15.262535095214844
+{'eval_accuracy': 0.9236995753715499, 'eval_precision': 0.9230030100834103, 'eval_recall': 0.9236995753715499, 'eval_f-1': 0.9231656973050348}
+Total original spans:  911
+Total predicted spans:  849
+Total number of original spans correctly predicted acc to strict match:  632
+Percent of original spans correctly predicted acc to strict match:  69.37431394072448
+Total number of original spans correctly predicted acc to fuzzy match:  718
+Percent of original spans correctly predicted acc to fuzzy match:  78.81448957189902
+Count of fuzzy matched spans:  86
+Count of spans with misaligned begin and end: 33 (38.37%) 
+Count of spans with misaligned begin: 26 (30.23%) 
+Count of spans with misaligned end: 27 (31.40%) 
+Epoch #5
+learning_rate: [6.698729810778129e-07]
+Training loss: 0.54, Time: 929.0037529468536
+{'eval_accuracy': 0.9887319580906008, 'eval_precision': 0.9887005077700611, 'eval_recall': 0.9887319580906008, 'eval_f-1': 0.9887108506318718}
+learning_rate: [6.698729810778129e-07]
+Validation loss: 5.04, Time: 15.293235540390015
+{'eval_accuracy': 0.9003450106157113, 'eval_precision': 0.906498187492973, 'eval_recall': 0.9003450106157113, 'eval_f-1': 0.9018502550544574}
+Total original spans:  911
+Total predicted spans:  909
+Total number of original spans correctly predicted acc to strict match:  640
+Percent of original spans correctly predicted acc to strict match:  70.25246981339188
+Total number of original spans correctly predicted acc to fuzzy match:  723
+Percent of original spans correctly predicted acc to fuzzy match:  79.36333699231614
+Count of fuzzy matched spans:  83
+Count of spans with misaligned begin and end: 38 (45.78%) 
+Count of spans with misaligned begin: 26 (31.33%) 
+Count of spans with misaligned end: 19 (22.89%) 
+Epoch #6
+learning_rate: [0.0]
+Training loss: 0.47, Time: 927.6641838550568
+{'eval_accuracy': 0.9902128075819494, 'eval_precision': 0.9901897036453642, 'eval_recall': 0.9902128075819494, 'eval_f-1': 0.9901978830772977}
+learning_rate: [0.0]
+Validation loss: 4.79, Time: 15.229942560195923
+{'eval_accuracy': 0.9072452229299363, 'eval_precision': 0.9112830200420569, 'eval_recall': 0.9072452229299363, 'eval_f-1': 0.9082102646642971}
+Total original spans:  911
+Total predicted spans:  901
+Total number of original spans correctly predicted acc to strict match:  643
+Percent of original spans correctly predicted acc to strict match:  70.58177826564214
+Total number of original spans correctly predicted acc to fuzzy match:  727
+Percent of original spans correctly predicted acc to fuzzy match:  79.80241492864984
+Count of fuzzy matched spans:  84
+Count of spans with misaligned begin and end: 40 (47.62%) 
+Count of spans with misaligned begin: 25 (29.76%) 
+Count of spans with misaligned end: 19 (22.62%) 
+learning_rate: [0.0]
+Validation loss: 3.67, Time: 25.730671644210815
+{'eval_accuracy': 0.9291044776119403, 'eval_precision': 0.9322603384739332, 'eval_recall': 0.9291044776119403, 'eval_f-1': 0.930264112802112}
+Done!

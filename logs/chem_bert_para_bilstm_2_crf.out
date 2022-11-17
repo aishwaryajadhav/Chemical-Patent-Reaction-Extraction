@@ -1,0 +1,482 @@
+Chem Sentence bert, only decoder (2 bilstm), no bert finetuning, other model training from scratch
+Using pretrained model:  recobo/chemical-bert-uncased-simcse
+Freeze Bert:  True
+Cuda =  True  with num_workers =  8  system version =  3.7.13 (default, Oct 18 2022, 18:57:03) 
+[GCC 11.2.0]
+Train dataset len 79593
+Val dataset len 423
+Test dataset len 688
+Train Loader len 2488
+Val Loader len 14
+Test Loader Len len 22
+Total params:  11553810
+Trainable params:  11553810
+Non Trainable params:  0
+Epochs:  25
+Lamda:  0.001
+Learning Rate:  0.005
+Epoch #1
+learning_rate: [0.004980286753286158]
+Training loss: 1.34, Time: 324.13050055503845
+{'eval_accuracy': 0.9795906989308105, 'eval_precision': 0.9795356956662941, 'eval_recall': 0.9795906989308105, 'eval_f-1': 0.9795520938814638}
+learning_rate: [0.004980286753286158]
+Validation loss: 6.11, Time: 1.4632666110992432
+{'eval_accuracy': 0.9000443262411347, 'eval_precision': 0.8964057322311173, 'eval_recall': 0.9000443262411347, 'eval_f-1': 0.897266042569881}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  704
+Total number of original spans correctly predicted acc to strict match:  381
+Percent of original spans correctly predicted acc to strict match:  45.84837545126354
+Total number of original spans correctly predicted acc to fuzzy match:  502
+Percent of original spans correctly predicted acc to fuzzy match:  60.40914560770156
+Count of fuzzy matched spans:  121
+Count of spans with misaligned begin and end: 14 (11.57%) 
+Count of spans with misaligned begin: 21 (17.36%) 
+Count of spans with misaligned end: 86 (71.07%) 
+Epoch #2
+learning_rate: [0.004921457902821555]
+Training loss: 0.63, Time: 324.8452112674713
+{'eval_accuracy': 0.9861396416770319, 'eval_precision': 0.9861085049492262, 'eval_recall': 0.9861396416770319, 'eval_f-1': 0.9861210281011445}
+learning_rate: [0.004921457902821555]
+Validation loss: 6.28, Time: 1.6118922233581543
+{'eval_accuracy': 0.9165927895981087, 'eval_precision': 0.9135721800770051, 'eval_recall': 0.9165927895981087, 'eval_f-1': 0.913807559029719}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  609
+Total number of original spans correctly predicted acc to strict match:  384
+Percent of original spans correctly predicted acc to strict match:  46.20938628158845
+Total number of original spans correctly predicted acc to fuzzy match:  480
+Percent of original spans correctly predicted acc to fuzzy match:  57.761732851985556
+Count of fuzzy matched spans:  96
+Count of spans with misaligned begin and end: 7 (7.29%) 
+Count of spans with misaligned begin: 13 (13.54%) 
+Count of spans with misaligned end: 76 (79.17%) 
+Epoch #3
+learning_rate: [0.004824441214720609]
+Training loss: 0.79, Time: 323.6157145500183
+{'eval_accuracy': 0.9845428461045569, 'eval_precision': 0.9845145323646923, 'eval_recall': 0.9845428461045569, 'eval_f-1': 0.9845251459343262}
+learning_rate: [0.004824441214720609]
+Validation loss: 7.01, Time: 1.447216510772705
+{'eval_accuracy': 0.9083924349881797, 'eval_precision': 0.9073239463705544, 'eval_recall': 0.9083924349881797, 'eval_f-1': 0.907724368234983}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  746
+Total number of original spans correctly predicted acc to strict match:  368
+Percent of original spans correctly predicted acc to strict match:  44.28399518652226
+Total number of original spans correctly predicted acc to fuzzy match:  525
+Percent of original spans correctly predicted acc to fuzzy match:  63.1768953068592
+Count of fuzzy matched spans:  157
+Count of spans with misaligned begin and end: 11 (7.01%) 
+Count of spans with misaligned begin: 23 (14.65%) 
+Count of spans with misaligned end: 123 (78.34%) 
+Epoch #4
+learning_rate: [0.004690766700109641]
+Training loss: 0.59, Time: 325.73017501831055
+{'eval_accuracy': 0.9863838528513814, 'eval_precision': 0.9863550922222956, 'eval_recall': 0.9863838528513814, 'eval_f-1': 0.9863666500868363}
+learning_rate: [0.004690766700109641]
+Validation loss: 8.70, Time: 1.6081368923187256
+{'eval_accuracy': 0.8506944444444444, 'eval_precision': 0.8471553920312709, 'eval_recall': 0.8506944444444444, 'eval_f-1': 0.8306791818643727}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  407
+Total number of original spans correctly predicted acc to strict match:  227
+Percent of original spans correctly predicted acc to strict match:  27.3164861612515
+Total number of original spans correctly predicted acc to fuzzy match:  309
+Percent of original spans correctly predicted acc to fuzzy match:  37.18411552346571
+Count of fuzzy matched spans:  82
+Count of spans with misaligned begin and end: 7 (8.54%) 
+Count of spans with misaligned begin: 15 (18.29%) 
+Count of spans with misaligned end: 60 (73.17%) 
+Epoch #5
+learning_rate: [0.004522542485937367]
+Training loss: 0.41, Time: 328.9349567890167
+{'eval_accuracy': 0.9900976687648412, 'eval_precision': 0.9900834864604898, 'eval_recall': 0.9900976687648412, 'eval_f-1': 0.9900892653704597}
+learning_rate: [0.004522542485937367]
+Validation loss: 6.68, Time: 1.4330763816833496
+{'eval_accuracy': 0.9116430260047281, 'eval_precision': 0.9122790235893964, 'eval_recall': 0.9116430260047281, 'eval_f-1': 0.9119181490978251}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  826
+Total number of original spans correctly predicted acc to strict match:  398
+Percent of original spans correctly predicted acc to strict match:  47.89410348977136
+Total number of original spans correctly predicted acc to fuzzy match:  549
+Percent of original spans correctly predicted acc to fuzzy match:  66.06498194945848
+Count of fuzzy matched spans:  151
+Count of spans with misaligned begin and end: 14 (9.27%) 
+Count of spans with misaligned begin: 23 (15.23%) 
+Count of spans with misaligned end: 114 (75.50%) 
+Epoch #6
+learning_rate: [0.004322421568553534]
+Training loss: 0.39, Time: 326.965208530426
+{'eval_accuracy': 0.9904859723845062, 'eval_precision': 0.9904722172168454, 'eval_recall': 0.9904859723845062, 'eval_f-1': 0.990477981338076}
+learning_rate: [0.004322421568553534]
+Validation loss: 7.04, Time: 1.4583299160003662
+{'eval_accuracy': 0.914524231678487, 'eval_precision': 0.9117753520207288, 'eval_recall': 0.914524231678487, 'eval_f-1': 0.9124631217389985}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  696
+Total number of original spans correctly predicted acc to strict match:  402
+Percent of original spans correctly predicted acc to strict match:  48.375451263537904
+Total number of original spans correctly predicted acc to fuzzy match:  535
+Percent of original spans correctly predicted acc to fuzzy match:  64.38026474127557
+Count of fuzzy matched spans:  133
+Count of spans with misaligned begin and end: 11 (8.27%) 
+Count of spans with misaligned begin: 21 (15.79%) 
+Count of spans with misaligned end: 101 (75.94%) 
+Epoch #7
+learning_rate: [0.004093559974371757]
+Training loss: 0.42, Time: 326.175320148468
+{'eval_accuracy': 0.9904859723845062, 'eval_precision': 0.9904735969630534, 'eval_recall': 0.9904859723845062, 'eval_f-1': 0.990478940254576}
+learning_rate: [0.004093559974371757]
+Validation loss: 7.00, Time: 1.6234781742095947
+{'eval_accuracy': 0.9154107565011821, 'eval_precision': 0.913855881030155, 'eval_recall': 0.9154107565011821, 'eval_f-1': 0.9143610096192676}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  715
+Total number of original spans correctly predicted acc to strict match:  390
+Percent of original spans correctly predicted acc to strict match:  46.931407942238266
+Total number of original spans correctly predicted acc to fuzzy match:  539
+Percent of original spans correctly predicted acc to fuzzy match:  64.86161251504213
+Count of fuzzy matched spans:  149
+Count of spans with misaligned begin and end: 11 (7.38%) 
+Count of spans with misaligned begin: 15 (10.07%) 
+Count of spans with misaligned end: 123 (82.55%) 
+Epoch #8
+learning_rate: [0.003839566987447521]
+Training loss: 0.47, Time: 326.37351417541504
+{'eval_accuracy': 0.989876229693566, 'eval_precision': 0.9898625395109688, 'eval_recall': 0.989876229693566, 'eval_f-1': 0.9898682596616903}
+learning_rate: [0.003839566987447521]
+Validation loss: 8.18, Time: 1.5055034160614014
+{'eval_accuracy': 0.8928782505910166, 'eval_precision': 0.8890094930261623, 'eval_recall': 0.8928782505910166, 'eval_f-1': 0.8871705686671026}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  581
+Total number of original spans correctly predicted acc to strict match:  344
+Percent of original spans correctly predicted acc to strict match:  41.395908543922985
+Total number of original spans correctly predicted acc to fuzzy match:  466
+Percent of original spans correctly predicted acc to fuzzy match:  56.07701564380265
+Count of fuzzy matched spans:  122
+Count of spans with misaligned begin and end: 7 (5.74%) 
+Count of spans with misaligned begin: 8 (6.56%) 
+Count of spans with misaligned end: 107 (87.70%) 
+Epoch #9
+learning_rate: [0.0035644482289127087]
+Training loss: 2.10, Time: 326.82109689712524
+{'eval_accuracy': 0.9684386503838277, 'eval_precision': 0.9681641480300882, 'eval_recall': 0.9684386503838277, 'eval_f-1': 0.9682195572163231}
+learning_rate: [0.0035644482289127087]
+Validation loss: 6.03, Time: 1.3753161430358887
+{'eval_accuracy': 0.914598108747045, 'eval_precision': 0.91464597973192, 'eval_recall': 0.914598108747045, 'eval_f-1': 0.9131503177710729}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  595
+Total number of original spans correctly predicted acc to strict match:  375
+Percent of original spans correctly predicted acc to strict match:  45.12635379061371
+Total number of original spans correctly predicted acc to fuzzy match:  439
+Percent of original spans correctly predicted acc to fuzzy match:  52.82791817087846
+Count of fuzzy matched spans:  64
+Count of spans with misaligned begin and end: 4 (6.25%) 
+Count of spans with misaligned begin: 13 (20.31%) 
+Count of spans with misaligned end: 47 (73.44%) 
+Epoch #10
+learning_rate: [0.0032725424859373934]
+Training loss: 0.43, Time: 325.2266528606415
+{'eval_accuracy': 0.9904160855854158, 'eval_precision': 0.9904007923333417, 'eval_recall': 0.9904160855854158, 'eval_f-1': 0.9904066177795242}
+learning_rate: [0.0032725424859373934]
+Validation loss: 7.03, Time: 1.4338982105255127
+{'eval_accuracy': 0.9038859338061466, 'eval_precision': 0.9000412998197392, 'eval_recall': 0.9038859338061466, 'eval_f-1': 0.9007808559044903}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  647
+Total number of original spans correctly predicted acc to strict match:  388
+Percent of original spans correctly predicted acc to strict match:  46.690734055354994
+Total number of original spans correctly predicted acc to fuzzy match:  482
+Percent of original spans correctly predicted acc to fuzzy match:  58.00240673886883
+Count of fuzzy matched spans:  94
+Count of spans with misaligned begin and end: 13 (13.83%) 
+Count of spans with misaligned begin: 18 (19.15%) 
+Count of spans with misaligned end: 63 (67.02%) 
+Epoch #11
+learning_rate: [0.0029684532864643356]
+Training loss: 0.31, Time: 323.33703660964966
+{'eval_accuracy': 0.9933187434824671, 'eval_precision': 0.9933126850174463, 'eval_recall': 0.9933187434824671, 'eval_f-1': 0.9933151937780345}
+learning_rate: [0.0029684532864643356]
+Validation loss: 7.94, Time: 1.630720615386963
+{'eval_accuracy': 0.8941341607565012, 'eval_precision': 0.8907318573600878, 'eval_recall': 0.8941341607565012, 'eval_f-1': 0.8862452302439843}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  504
+Total number of original spans correctly predicted acc to strict match:  328
+Percent of original spans correctly predicted acc to strict match:  39.4705174488568
+Total number of original spans correctly predicted acc to fuzzy match:  404
+Percent of original spans correctly predicted acc to fuzzy match:  48.61612515042118
+Count of fuzzy matched spans:  76
+Count of spans with misaligned begin and end: 11 (14.47%) 
+Count of spans with misaligned begin: 19 (25.00%) 
+Count of spans with misaligned end: 46 (60.53%) 
+Epoch #12
+learning_rate: [0.002656976298823319]
+Training loss: 0.24, Time: 323.2008295059204
+{'eval_accuracy': 0.9950670913271268, 'eval_precision': 0.9950627295998709, 'eval_recall': 0.9950670913271268, 'eval_f-1': 0.9950645224690493}
+learning_rate: [0.002656976298823319]
+Validation loss: 7.36, Time: 1.6582703590393066
+{'eval_accuracy': 0.9030732860520094, 'eval_precision': 0.8990447361002775, 'eval_recall': 0.9030732860520094, 'eval_f-1': 0.8989866829858619}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  580
+Total number of original spans correctly predicted acc to strict match:  358
+Percent of original spans correctly predicted acc to strict match:  43.080625752105895
+Total number of original spans correctly predicted acc to fuzzy match:  455
+Percent of original spans correctly predicted acc to fuzzy match:  54.75330926594465
+Count of fuzzy matched spans:  97
+Count of spans with misaligned begin and end: 9 (9.28%) 
+Count of spans with misaligned begin: 22 (22.68%) 
+Count of spans with misaligned end: 66 (68.04%) 
+Epoch #13
+learning_rate: [0.002343023701176743]
+Training loss: 0.19, Time: 323.46300768852234
+{'eval_accuracy': 0.9961444473760255, 'eval_precision': 0.9961421856468212, 'eval_recall': 0.9961444473760255, 'eval_f-1': 0.9961431320475318}
+learning_rate: [0.002343023701176743]
+Validation loss: 7.49, Time: 1.747812032699585
+{'eval_accuracy': 0.916371158392435, 'eval_precision': 0.9131440401824116, 'eval_recall': 0.916371158392435, 'eval_f-1': 0.9136092246831837}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  633
+Total number of original spans correctly predicted acc to strict match:  407
+Percent of original spans correctly predicted acc to strict match:  48.97713598074609
+Total number of original spans correctly predicted acc to fuzzy match:  492
+Percent of original spans correctly predicted acc to fuzzy match:  59.205776173285194
+Count of fuzzy matched spans:  85
+Count of spans with misaligned begin and end: 9 (10.59%) 
+Count of spans with misaligned begin: 29 (34.12%) 
+Count of spans with misaligned end: 47 (55.29%) 
+Epoch #14
+learning_rate: [0.002031546713535705]
+Training loss: 0.17, Time: 325.2351305484772
+{'eval_accuracy': 0.9966128459789177, 'eval_precision': 0.9966113951323374, 'eval_recall': 0.9966128459789177, 'eval_f-1': 0.9966120260925304}
+learning_rate: [0.002031546713535705]
+Validation loss: 7.39, Time: 1.4974384307861328
+{'eval_accuracy': 0.9160017730496454, 'eval_precision': 0.9137242242757221, 'eval_recall': 0.9160017730496454, 'eval_f-1': 0.9142668102243129}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  695
+Total number of original spans correctly predicted acc to strict match:  462
+Percent of original spans correctly predicted acc to strict match:  55.5956678700361
+Total number of original spans correctly predicted acc to fuzzy match:  540
+Percent of original spans correctly predicted acc to fuzzy match:  64.98194945848375
+Count of fuzzy matched spans:  78
+Count of spans with misaligned begin and end: 11 (14.10%) 
+Count of spans with misaligned begin: 13 (16.67%) 
+Count of spans with misaligned end: 54 (69.23%) 
+Epoch #15
+learning_rate: [0.0017274575140626353]
+Training loss: 0.14, Time: 322.510333776474
+{'eval_accuracy': 0.997465621976807, 'eval_precision': 0.9974644230652621, 'eval_recall': 0.997465621976807, 'eval_f-1': 0.9974649369523289}
+learning_rate: [0.0017274575140626353]
+Validation loss: 8.01, Time: 1.5654799938201904
+{'eval_accuracy': 0.9031471631205674, 'eval_precision': 0.8998826392568415, 'eval_recall': 0.9031471631205674, 'eval_f-1': 0.900286173823796}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  598
+Total number of original spans correctly predicted acc to strict match:  355
+Percent of original spans correctly predicted acc to strict match:  42.71961492178099
+Total number of original spans correctly predicted acc to fuzzy match:  440
+Percent of original spans correctly predicted acc to fuzzy match:  52.9482551143201
+Count of fuzzy matched spans:  85
+Count of spans with misaligned begin and end: 9 (10.59%) 
+Count of spans with misaligned begin: 10 (11.76%) 
+Count of spans with misaligned end: 66 (77.65%) 
+Epoch #16
+learning_rate: [0.0014355517710873192]
+Training loss: 0.12, Time: 321.0303907394409
+{'eval_accuracy': 0.9977608740718404, 'eval_precision': 0.9977603437454471, 'eval_recall': 0.9977608740718404, 'eval_f-1': 0.9977605828919199}
+learning_rate: [0.0014355517710873192]
+Validation loss: 8.05, Time: 1.39935302734375
+{'eval_accuracy': 0.9188091016548463, 'eval_precision': 0.9181588391908497, 'eval_recall': 0.9188091016548463, 'eval_f-1': 0.9180803524041531}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  700
+Total number of original spans correctly predicted acc to strict match:  410
+Percent of original spans correctly predicted acc to strict match:  49.338146811071
+Total number of original spans correctly predicted acc to fuzzy match:  526
+Percent of original spans correctly predicted acc to fuzzy match:  63.29723225030084
+Count of fuzzy matched spans:  116
+Count of spans with misaligned begin and end: 10 (8.62%) 
+Count of spans with misaligned begin: 28 (24.14%) 
+Count of spans with misaligned end: 78 (67.24%) 
+Epoch #17
+learning_rate: [0.0011604330125525167]
+Training loss: 0.08, Time: 324.0398426055908
+{'eval_accuracy': 0.9988441194577412, 'eval_precision': 0.9988439655410101, 'eval_recall': 0.9988441194577412, 'eval_f-1': 0.9988440306352264}
+learning_rate: [0.0011604330125525167]
+Validation loss: 8.99, Time: 1.5422399044036865
+{'eval_accuracy': 0.9058806146572104, 'eval_precision': 0.9022247421160446, 'eval_recall': 0.9058806146572104, 'eval_f-1': 0.9025695163153042}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  625
+Total number of original spans correctly predicted acc to strict match:  390
+Percent of original spans correctly predicted acc to strict match:  46.931407942238266
+Total number of original spans correctly predicted acc to fuzzy match:  482
+Percent of original spans correctly predicted acc to fuzzy match:  58.00240673886883
+Count of fuzzy matched spans:  92
+Count of spans with misaligned begin and end: 15 (16.30%) 
+Count of spans with misaligned begin: 17 (18.48%) 
+Count of spans with misaligned end: 60 (65.22%) 
+Epoch #18
+learning_rate: [0.0009064400256282796]
+Training loss: 0.07, Time: 322.57585406303406
+{'eval_accuracy': 0.99893874147224, 'eval_precision': 0.9989386671360396, 'eval_recall': 0.99893874147224, 'eval_f-1': 0.9989387020230456}
+learning_rate: [0.0009064400256282796]
+Validation loss: 8.86, Time: 1.4850420951843262
+{'eval_accuracy': 0.9147458628841607, 'eval_precision': 0.9117719823058631, 'eval_recall': 0.9147458628841607, 'eval_f-1': 0.9117157118637447}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  632
+Total number of original spans correctly predicted acc to strict match:  417
+Percent of original spans correctly predicted acc to strict match:  50.18050541516246
+Total number of original spans correctly predicted acc to fuzzy match:  503
+Percent of original spans correctly predicted acc to fuzzy match:  60.5294825511432
+Count of fuzzy matched spans:  86
+Count of spans with misaligned begin and end: 7 (8.14%) 
+Count of spans with misaligned begin: 16 (18.60%) 
+Count of spans with misaligned end: 63 (73.26%) 
+Epoch #19
+learning_rate: [0.0006775784314464702]
+Training loss: 0.05, Time: 319.0601887702942
+{'eval_accuracy': 0.9993835827271242, 'eval_precision': 0.9993835058270462, 'eval_recall': 0.9993835827271242, 'eval_f-1': 0.9993835401252266}
+learning_rate: [0.0006775784314464702]
+Validation loss: 9.17, Time: 1.7369532585144043
+{'eval_accuracy': 0.9123817966903073, 'eval_precision': 0.9089068913301367, 'eval_recall': 0.9123817966903073, 'eval_f-1': 0.908723485897388}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  606
+Total number of original spans correctly predicted acc to strict match:  390
+Percent of original spans correctly predicted acc to strict match:  46.931407942238266
+Total number of original spans correctly predicted acc to fuzzy match:  470
+Percent of original spans correctly predicted acc to fuzzy match:  56.55836341756919
+Count of fuzzy matched spans:  80
+Count of spans with misaligned begin and end: 6 (7.50%) 
+Count of spans with misaligned begin: 23 (28.75%) 
+Count of spans with misaligned end: 51 (63.75%) 
+Epoch #20
+learning_rate: [0.0004774575140626305]
+Training loss: 0.03, Time: 319.0190875530243
+{'eval_accuracy': 0.9996383947080774, 'eval_precision': 0.9996383826213144, 'eval_recall': 0.9996383947080774, 'eval_f-1': 0.9996383877128019}
+learning_rate: [0.0004774575140626305]
+Validation loss: 9.37, Time: 1.3528029918670654
+{'eval_accuracy': 0.9235372340425532, 'eval_precision': 0.9211419882802767, 'eval_recall': 0.9235372340425532, 'eval_f-1': 0.9214351500857164}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  638
+Total number of original spans correctly predicted acc to strict match:  437
+Percent of original spans correctly predicted acc to strict match:  52.58724428399518
+Total number of original spans correctly predicted acc to fuzzy match:  501
+Percent of original spans correctly predicted acc to fuzzy match:  60.28880866425993
+Count of fuzzy matched spans:  64
+Count of spans with misaligned begin and end: 5 (7.81%) 
+Count of spans with misaligned begin: 17 (26.56%) 
+Count of spans with misaligned end: 42 (65.62%) 
+Epoch #21
+learning_rate: [0.0003092332998903424]
+Training loss: 0.03, Time: 310.0142068862915
+{'eval_accuracy': 0.9997161339565037, 'eval_precision': 0.9997161353685781, 'eval_recall': 0.9997161339565037, 'eval_f-1': 0.9997161343592257}
+learning_rate: [0.0003092332998903424]
+Validation loss: 9.79, Time: 1.4309155941009521
+{'eval_accuracy': 0.9192523640661938, 'eval_precision': 0.9160813597090416, 'eval_recall': 0.9192523640661938, 'eval_f-1': 0.9162328935986254}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  601
+Total number of original spans correctly predicted acc to strict match:  408
+Percent of original spans correctly predicted acc to strict match:  49.09747292418773
+Total number of original spans correctly predicted acc to fuzzy match:  474
+Percent of original spans correctly predicted acc to fuzzy match:  57.03971119133574
+Count of fuzzy matched spans:  66
+Count of spans with misaligned begin and end: 6 (9.09%) 
+Count of spans with misaligned begin: 21 (31.82%) 
+Count of spans with misaligned end: 39 (59.09%) 
+Epoch #22
+learning_rate: [0.00017555878527937172]
+Training loss: 0.02, Time: 306.050968170166
+{'eval_accuracy': 0.9998539444423504, 'eval_precision': 0.9998539449801056, 'eval_recall': 0.9998539444423504, 'eval_f-1': 0.9998539445770984}
+learning_rate: [0.00017555878527937172]
+Validation loss: 10.94, Time: 1.3587355613708496
+{'eval_accuracy': 0.9066193853427896, 'eval_precision': 0.9025281736106284, 'eval_recall': 0.9066193853427896, 'eval_f-1': 0.9020386237485202}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  555
+Total number of original spans correctly predicted acc to strict match:  371
+Percent of original spans correctly predicted acc to strict match:  44.64500601684717
+Total number of original spans correctly predicted acc to fuzzy match:  443
+Percent of original spans correctly predicted acc to fuzzy match:  53.309265944645
+Count of fuzzy matched spans:  72
+Count of spans with misaligned begin and end: 5 (6.94%) 
+Count of spans with misaligned begin: 25 (34.72%) 
+Count of spans with misaligned end: 42 (58.33%) 
+Epoch #23
+learning_rate: [7.854209717842218e-05]
+Training loss: 0.01, Time: 306.88315200805664
+{'eval_accuracy': 0.9999513148141168, 'eval_precision': 0.9999513140782855, 'eval_recall': 0.9999513148141168, 'eval_f-1': 0.999951314104356}
+learning_rate: [7.854209717842218e-05]
+Validation loss: 11.69, Time: 1.4534878730773926
+{'eval_accuracy': 0.910830378250591, 'eval_precision': 0.9069653261438672, 'eval_recall': 0.910830378250591, 'eval_f-1': 0.9066411996836987}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  540
+Total number of original spans correctly predicted acc to strict match:  371
+Percent of original spans correctly predicted acc to strict match:  44.64500601684717
+Total number of original spans correctly predicted acc to fuzzy match:  423
+Percent of original spans correctly predicted acc to fuzzy match:  50.90252707581227
+Count of fuzzy matched spans:  52
+Count of spans with misaligned begin and end: 3 (5.77%) 
+Count of spans with misaligned begin: 19 (36.54%) 
+Count of spans with misaligned end: 30 (57.69%) 
+Epoch #24
+learning_rate: [1.971324671380548e-05]
+Training loss: 0.01, Time: 307.2881579399109
+{'eval_accuracy': 0.999984295101328, 'eval_precision': 0.999984295050855, 'eval_recall': 0.999984295101328, 'eval_f-1': 0.9999842950749215}
+learning_rate: [1.971324671380548e-05]
+Validation loss: 11.55, Time: 1.4263415336608887
+{'eval_accuracy': 0.9131944444444444, 'eval_precision': 0.9096641921297782, 'eval_recall': 0.9131944444444444, 'eval_f-1': 0.9098795857257908}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  587
+Total number of original spans correctly predicted acc to strict match:  399
+Percent of original spans correctly predicted acc to strict match:  48.014440433213
+Total number of original spans correctly predicted acc to fuzzy match:  459
+Percent of original spans correctly predicted acc to fuzzy match:  55.23465703971119
+Count of fuzzy matched spans:  60
+Count of spans with misaligned begin and end: 4 (6.67%) 
+Count of spans with misaligned begin: 24 (40.00%) 
+Count of spans with misaligned end: 32 (53.33%) 
+Epoch #25
+learning_rate: [0.0]
+Training loss: 0.01, Time: 305.4855442047119
+{'eval_accuracy': 0.9999952885303984, 'eval_precision': 0.9999952885896625, 'eval_recall': 0.9999952885303984, 'eval_f-1': 0.9999952885531211}
+learning_rate: [0.0]
+Validation loss: 12.21, Time: 1.372507095336914
+{'eval_accuracy': 0.9113475177304965, 'eval_precision': 0.9075831942877501, 'eval_recall': 0.9113475177304965, 'eval_f-1': 0.9075485095592805}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  567
+Total number of original spans correctly predicted acc to strict match:  391
+Percent of original spans correctly predicted acc to strict match:  47.0517448856799
+Total number of original spans correctly predicted acc to fuzzy match:  446
+Percent of original spans correctly predicted acc to fuzzy match:  53.67027677496991
+Count of fuzzy matched spans:  55
+Count of spans with misaligned begin and end: 5 (9.09%) 
+Count of spans with misaligned begin: 22 (40.00%) 
+Count of spans with misaligned end: 28 (50.91%) 
+learning_rate: [0.0]
+Validation loss: 11.08, Time: 1.9831829071044922
+{'eval_accuracy': 0.9067042151162791, 'eval_precision': 0.9062055162191299, 'eval_recall': 0.9067042151162791, 'eval_f-1': 0.9061374228896565}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  1001
+Total predicted spans:  826
+Total number of original spans correctly predicted acc to strict match:  443
+Percent of original spans correctly predicted acc to strict match:  44.255744255744254
+Total number of original spans correctly predicted acc to fuzzy match:  595
+Percent of original spans correctly predicted acc to fuzzy match:  59.44055944055944
+Count of fuzzy matched spans:  152
+Count of spans with misaligned begin and end: 11 (7.24%) 
+Count of spans with misaligned begin: 19 (12.50%) 
+Count of spans with misaligned end: 122 (80.26%) 
+Done!
