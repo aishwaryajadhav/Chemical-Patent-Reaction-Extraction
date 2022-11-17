@@ -1,0 +1,36 @@
+Sentence level model, chem bert, no bert finetuning, other model training from scratch, context  = 32
+Using pretrained model:  recobo/chemical-bert-uncased-pharmaceutical-chemical-classifier
+Freeze Bert:  True
+Cuda =  True  with num_workers =  8  system version =  3.7.13 (default, Oct 18 2022, 18:57:03) 
+[GCC 11.2.0]
+128
+128
+128
+Train dataset len 79593
+Val dataset len 423
+Test dataset len 688
+Train Loader len 2488
+Val Loader len 14
+Test Loader Len len 22
+Total params:  130909458
+Trainable params:  20990994
+Non Trainable params:  109918464
+Epochs:  25
+Lamda:  0.001
+Learning Rate:  0.005
+Epoch #1
+learning_rate: [0.004980286753286158]
+Training loss: 10.31, Time: 5394.750618219376
+{'eval_accuracy': 0.7916768748508035, 'eval_precision': 0.6577449401688089, 'eval_recall': 0.7916768748508035, 'eval_f-1': 0.7057124554916551}
+learning_rate: [0.004980286753286158]
+Validation loss: 13.59, Time: 24.495728969573975
+{'eval_accuracy': 0.7703161938534279, 'eval_precision': 0.5933870385128318, 'eval_recall': 0.7703161938534279, 'eval_f-1': 0.6703740728047151}
+Index(['para', 'label', 'document', 'predictions'], dtype='object')
+Total original spans:  831
+Total predicted spans:  0
+Total number of original spans correctly predicted acc to strict match:  0
+Percent of original spans correctly predicted acc to strict match:  0.0
+Total number of original spans correctly predicted acc to fuzzy match:  0
+Percent of original spans correctly predicted acc to fuzzy match:  0.0
+Count of fuzzy matched spans:  0
+division by zero
