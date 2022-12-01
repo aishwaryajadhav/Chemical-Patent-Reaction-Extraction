@@ -1,0 +1,18 @@
+(lp0
+S'benzyl'
+p1
+aS'C(O)OR3'
+p2
+aS'phenyl'
+p3
+aS'halogen'
+p4
+aS'C2F5'
+p5
+aS'C3-C6 cycloalkyl'
+p6
+aS'nitrogen'
+p7
+aS'hydrogen'
+p8
+a.

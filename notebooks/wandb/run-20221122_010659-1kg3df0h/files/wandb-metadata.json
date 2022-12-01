@@ -1,0 +1,308 @@
+{
+    "os": "Linux-3.10.0-957.1.3.el7.x86_64-x86_64-with-centos-7.6.1810-Core",
+    "python": "3.7.13",
+    "heartbeatAt": "2022-11-22T06:06:59.675743",
+    "startedAt": "2022-11-22T06:06:59.098061",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "notebooks/evaluate_model-jvsc-ecdc1cf1-9ce7-4346-809d-128d8abe72658a1e6428-99c2-4133-96fc-fa10de32f5bb.ipynb",
+    "root": "/home/anjadhav/Chemical-Patent-Reaction-Extraction",
+    "git": {
+        "remote": "https://github.com/aishwaryajadhav/Chemical-Patent-Reaction-Extraction.git",
+        "commit": "fbc74b1db3d11d0cb57965d4f16430ddec7cc597"
+    },
+    "email": "anjadhav@andrew.cmu.edu",
+    "host": "shire-0-20.eth",
+    "username": "anjadhav",
+    "executable": "/home/anjadhav/miniconda3/envs/chemIR/bin/python",
+    "cpu_count": 24,
+    "cpu_count_logical": 48,
+    "cpu_freq": {
+        "current": 1250.3593541666664,
+        "min": 1200.0,
+        "max": 2900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1200.17,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1203.125,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.305,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1203.125,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1244.348,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1295.104,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1199.902,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.976,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1214.001,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.439,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.573,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1201.11,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1199.902,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1212.39,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1218.566,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.036,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.708,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1205.273,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1261.804,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1269.189,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.17,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.439,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1266.235,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1204.87,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.17,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1205.541,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1219.238,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 2419.677,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1265.966,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1423.876,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1205.81,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.305,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1486.45,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1224.072,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.439,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.17,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.17,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1289.733,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1209.436,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1199.902,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1395.812,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1205.81,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.305,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.17,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.439,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1200.17,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1251.464,
+            "min": 1200.0,
+            "max": 2900.0
+        },
+        {
+            "current": 1225.012,
+            "min": 1200.0,
+            "max": 2900.0
+        }
+    ],
+    "disk": {
+        "total": 240.18247985839844,
+        "used": 28.302391052246094
+    },
+    "gpu": "NVIDIA RTX A4500",
+    "gpu_count": 7,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA RTX A4500",
+            "memory_total": 21167407104
+        },
+        {
+            "name": "NVIDIA RTX A4500",
+            "memory_total": 21167407104
+        },
+        {
+            "name": "NVIDIA RTX A4500",
+            "memory_total": 21167407104
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51050315776
+        },
+        {
+            "name": "NVIDIA RTX A4500",
+            "memory_total": 21167407104
+        },
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51050315776
+        },
+        {
+            "name": "NVIDIA RTX A4500",
+            "memory_total": 21167407104
+        }
+    ],
+    "memory": {
+        "total": 503.61794662475586
+    }
+}

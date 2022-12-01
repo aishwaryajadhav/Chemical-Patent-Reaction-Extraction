@@ -7,7 +7,7 @@ import numpy as np
 from tqdm import tqdm
 
 def load_config():
-    with open("config.yaml", "r") as configfile:
+    with open("/home/anjadhav/Chemical-Patent-Reaction-Extraction/config.yaml", "r") as configfile:
         config_dict = yaml.load(configfile, Loader=yaml.FullLoader)
     # print(config_dict)
     return config_dict
@@ -30,7 +30,6 @@ def load_pretrained_weights(model, pretrained_path):
     print("=============")
     print(model_dict.keys())
     model.load_state_dict(model_dict)
-    exit()
     return model   
 
 def load_pretrained_weights_modified(model, pretrained_path):
@@ -78,7 +77,7 @@ def get_spans(pred_df, predictions):
 
 
 
-def get_span_perf(pred_df, predictions):
+def get_span_perf(pred_df, predictions, wandb=""):
     # print(len(pred_df))
     pred_df = pred_df[['para','label','document']][:len(predictions)]
     pred_df['predictions'] = predictions
@@ -196,8 +195,25 @@ def get_span_perf(pred_df, predictions):
     print("Count of spans with misaligned end: {} ({:.2f}%) ".format(miss_end, miss_end/fuzzy_matched_only*100))
     print("Count of missed spans: {} ({:.2f}%) ".format(len(no_match_spans), len(no_match_spans)/len(orig)*100))
 
+    if(wandb != ""):
+        test_scores = {
+            wandb+"strict_recall": recall_strict,
+            wandb+"strict_precision": precision_strict,
+            wandb+"strict_f1": 2*precision_strict*recall_strict / (recall_strict+precision_strict),
+            wandb+"fuzzy_recall": recall_fuzzy,
+            wandb+"fuzzy_precision": precision_fuzzy,
+            wandb+"fuzzy_f1": 2*precision_fuzzy*recall_fuzzy / (recall_fuzzy+precision_fuzzy),
+            wandb+"fuzzy_match_count": miss_start_end+miss_start+miss_end,
+            wandb+"missed_span_count": len(no_match_spans)/len(orig)*100,
+            wandb+"misaligned_begin_end_count": miss_start_end/fuzzy_matched_only*100,
+            wandb+"misaligned_begin": miss_start/fuzzy_matched_only*100,
+            wandb+"misaligned_end": miss_end/fuzzy_matched_only*100,
+        }
+        return pred_df, test_scores
+       
 
-    return pred_df
+    return pred_df, {}
+    
 
 
 
@@ -241,22 +257,25 @@ def train(para_model, data_loader, device, optimizer, scheduler):
     avg_loss = np.mean(avg_loss)
     print('learning_rate: {}'.format(scheduler.get_last_lr()))
     print('Training loss: {:.2f}, Time: {}'.format(avg_loss, end-start))
-
+    
     all_predictions = np.array(all_predictions)
     all_targets = np.array(all_targets)
     scores = precision_recall_fscore_support(all_targets, all_predictions, 
                                             average="weighted", zero_division=0.)
 
     test_scores={
-      "eval_accuracy": (all_predictions == all_targets).sum() / len(all_predictions),
-      "eval_precision": scores[0],
-      "eval_recall": scores[1],
-      "eval_f-1": scores[2]
+      "train_accuracy": (all_predictions == all_targets).sum() / len(all_predictions),
+      "train_precision": scores[0],
+      "train_recall": scores[1],
+      "train_f-1": scores[2]
     }
     print(test_scores)
 
+    return avg_loss, test_scores
 
-def validate(para_model, data_loader, device, optimizer, scheduler):
+
+
+def validate(para_model, data_loader, device, optimizer, scheduler, wandb = ""):
     para_model.eval()
     # crf_model.eval()
 
@@ -289,7 +308,7 @@ def validate(para_model, data_loader, device, optimizer, scheduler):
       
     end = time.time()
     avg_loss = np.mean(avg_loss)
-    print('learning_rate: {}'.format(scheduler.get_last_lr()))
+    # print('learning_rate: {}'.format(scheduler.get_last_lr()))
     print('Validation loss: {:.2f}, Time: {}'.format(avg_loss, end-start))
 
     all_predictions = np.array(all_predictions)
@@ -297,14 +316,16 @@ def validate(para_model, data_loader, device, optimizer, scheduler):
     scores = precision_recall_fscore_support(all_targets, all_predictions, 
                                             average="weighted", zero_division=0.)
 
+   
     test_scores={
-      "eval_accuracy": (all_predictions == all_targets).sum() / len(all_predictions),
-      "eval_precision": scores[0],
-      "eval_recall": scores[1],
-      "eval_f-1": scores[2]
+      wandb+"eval_accuracy": (all_predictions == all_targets).sum() / len(all_predictions),
+      wandb+"eval_precision": scores[0],
+      wandb+"eval_recall": scores[1],
+      wandb+"eval_f-1": scores[2]
     }
     print(test_scores)
-    return test_scores["eval_f-1"], all_predictions
+
+    return test_scores[wandb+"eval_f-1"], all_predictions, ""
 
 
 def extract(para_model, data_loader, device):

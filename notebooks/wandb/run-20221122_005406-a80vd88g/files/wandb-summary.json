@@ -1,0 +1,1 @@
+{"validate_eval_accuracy": 0.9532908704883227, "validate_eval_precision": 0.9525908355479169, "validate_eval_recall": 0.9532908704883227, "validate_eval_f-1": 0.9525667530577686, "_timestamp": 1669096485.8998663, "_runtime": 39.068549394607544, "_step": 0, "_wandb": {"runtime": 29}}

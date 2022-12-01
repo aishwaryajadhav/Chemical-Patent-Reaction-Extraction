@@ -1,21 +1,22 @@
-name: "chem bert, no bert finetuning, other model training from checkpoint"
+name: "base bert uncased, additional [CHEM] token for tagged chemical names, bert no finetuning, main model training from scratch"
 CUDA_VISIBLE_DEVICES: "1"
-pretrained_model: "recobo/chemical-bert-uncased-pharmaceutical-chemical-classifier"
+pretrained_model: "bert-base-uncased"
 batch_size: 32
 max_para_length: 128
 para_seq_len: 8
 freeze_bert: True
+enable_wandb: False
 decoder_bilstm_layers: 1
 encoder_bilstm_layers: 1
-model_save_path: "./chem_bert_iob_bilstm_crf_no_finetune_para_8/"
+model_save_path: "./bert_bilstm_crf_chem_token_no_finetune/"
 stride: 1
 test_file: "test_data_iob.csv"
 val_file: "val_data_iob.csv"
 train_file: "train_data_iob.csv"
-pretrained_full_model_path: "./model_model_params_0.9428545098368426.pth"
-epochs: 15 #changed from 10
+pretrained_full_model_path: ""
+epochs: 30 #changed from 10
 lamda: 1e-3  #L2 regularization (prev : 1e-4)
-learning_rate: 5e-4 #changed from 1e-2   ## Greatly reduced
+learning_rate: 1e-3 #changed from 1e-2   ## Greatly reduced
 test_pickle: "test_embeddings.pkl" 
 val_pickle: "val_embeddings.pkl"
 train_pickle: "train_embeddings.pkl"

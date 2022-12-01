@@ -7,13 +7,13 @@ from utils import load_config
 import pickle
 
 class CRFEmbeddingDataset(Dataset):
-    def __init__(self, csv_file, para_seq_len, pretrained_model, stride = 1):
+    def __init__(self, csv_file, para_seq_len, tokenizer, stride = 1):
       df = pd.read_csv(csv_file)
       self.config_dict = load_config()
       print(self.config_dict['max_para_length'])
       self.para_seq_len = para_seq_len
-      self.tokenizer = BertTokenizer.from_pretrained(pretrained_model, do_lower=True)    
-
+      self.tokenizer = tokenizer
+      
       # Tokenize the paragraphs
       self.df = df["para"].apply(self.preprocess)
       self.y = df['label']
@@ -21,7 +21,6 @@ class CRFEmbeddingDataset(Dataset):
       self.stride = stride
       
       
-  
      
     def preprocess(self, examples):
       return self.tokenizer(examples, truncation=True, 
@@ -61,13 +60,14 @@ class ParaEmbeddings(Dataset):
 
 
 class ContextEmbeddingDataset(Dataset):
-    def __init__(self, csv_file, context, pretrained_model, max_para_length):
+    def __init__(self, csv_file, context, tokenizer, max_para_length):
       df = pd.read_csv(csv_file)
 
       self.context = context
-      self.tokenizer = BertTokenizer.from_pretrained(pretrained_model, do_lower=True)    
+      self.tokenizer = tokenizer 
       self.max_para_length = max_para_length
       # Tokenize the paragraphs
+      
       self.df = df["para"].apply(self.preprocess)
       self.y = df['label']
   

@@ -13,7 +13,7 @@ import torch.optim as optim
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import BertTokenizer, BertModel
+from transformers import AutoModel
 import time
 from torch.utils.data import DataLoader, Dataset 
 from tqdm import tqdm
@@ -24,7 +24,7 @@ warnings.filterwarnings("ignore")
 class BertEmbedding(nn.Module):
   def __init__(self, pretrained_model):
     super().__init__()
-    self.model = BertModel.from_pretrained(pretrained_model, output_hidden_states = True)
+    self.model = AutoModel.from_pretrained(pretrained_model, output_hidden_states = True)
   
 
   def forward(self, x):
